@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Expenses-tracker</title>
+</head>
+
+<body>
+	<div>
+		<div>
+			<h2>Expenses-tracker</h2>
+		</div>
+
+		<div class="initial-amount">
+			<p>Add initial amount : </p>
+			<input type="text" class="initial-amount-input" id="initial-amount-input">
+			<button onclick="addAmount()">Proceed</button>
+		</div>
+
+		<div>
+			<h2 id="total-balance">Total Balance : </h2>
+			
+			<button onclick="showAddIncome()">Add amount</button>
+
+			<!-- Manual income section (hidden initially) -->
+			<div id="manual-income-container" style="display: none;">
+				<input type="text" placeholder="Enter income amount" id="manual-income-input">
+				<button onclick="submitIncome()">Submit Income</button>
+			</div>
+
+			<div>
+				<input type="text" placeholder="Expense Details" id="details-input">
+				<input type="text" placeholder="Amount" id="amount-input">
+				<button onclick="expenses()">Submit</button>
+			</div>
+
+			<div>
+				<table id="expenses-list">
+					<thead>
+						<tr>
+							<th>Description</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody id="expenses-table-body">
+						<!-- Expense rows will go here -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script src="home.js"></script>
+</body>
+
+</html>
